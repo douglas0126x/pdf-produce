@@ -209,6 +209,7 @@ public class PDFProducer {
 		
 		
 		/*
+		 * 
 		String xmlStr = "携带发票信息的xml字符串";
 		xmlStr = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><FPXT><RESPONSE_CODE>0000</RESPONSE_CODE><RESPONSE_TIP>上传成功</RESPONSE_TIP><RESPONSE_CONTENT><FP><PDF_MD5></PDF_MD5><CYJG_CODE>001</CYJG_CODE><CYJG_TIP>查验成功发票一致</CYJG_TIP><FPZL>10</FPZL><FPDM>1100162320</FPDM><FPHM>61355879</FPHM><CYCS>0</CYCS><XFSH>110112599688066</XFSH><XFMC>北京宏源永辉酒店管理有限公司</XFMC><XFDZDH></XFDZDH><XFYHZH>北京银行光机电园区支行01091669200120108001148</XFYHZH><GFSH> </GFSH><GFMC>北京东港嘉华安全信息技术有限公司</GFMC><GFDZDH> </GFDZDH><GFYHZH> </GFYHZH><KPRQ>20170122</KPRQ><JE>168.93</JE><SE>5.07</SE><JSHJ>174.00</JSHJ><BZ></BZ><KPR></KPR><SKR></SKR><FHR></FHR><JYM>16406981958494983504</JYM><LZFPDM></LZFPDM><LZFPHM></LZFPHM><ZFBZ>N</ZFBZ><XM><MXXX><MXXH></MXXH><MC>住宿服务</MC><JE>168.93</JE><SL>3</SL><SE>5.07</SE><HSDJ></HSDJ><HSJE></HSJE><SHUL>1</SHUL><DJ>168.93203883495147</DJ><GGXH> </GGXH><JLDW></JLDW></MXXX></XM></FP></RESPONSE_CONTENT></FPXT>";
 		FPDistributed middleModel = XmlUtil.parseXML(xmlStr);
@@ -313,42 +314,45 @@ public class PDFProducer {
 			*/
 		
 		JAR_FPQZ_KJ jar_fpqz_kj = new JAR_FPQZ_KJ();
-		jar_fpqz_kj.setGMF_DZDH("");
-		jar_fpqz_kj.setGMF_YHZH("");
-		jar_fpqz_kj.setGMF_MC("赵东");
-		jar_fpqz_kj.setGMF_NSRSBH("");
-		jar_fpqz_kj.setJSHJ("1");
-		jar_fpqz_kj.setHJJE("1");
+		
+		jar_fpqz_kj.setGMF_DZDH("北京市海淀区数码大厦A座30层");
+		jar_fpqz_kj.setGMF_YHZH("海淀区中关村南大街59号18楼  021-39328876");
+		jar_fpqz_kj.setGMF_MC("大象慧云信息技术有限公司");
+		jar_fpqz_kj.setGMF_NSRSBH("91110108MA004CPN95");
+		jar_fpqz_kj.setJSHJ("4");
+		jar_fpqz_kj.setHJJE("4");
 		jar_fpqz_kj.setHJSE("0");
 		jar_fpqz_kj.setKPLX("0");
-		jar_fpqz_kj
-				.setBZ("中国建设银行中国建设银行中国建设银行中国建设银行中国建设银行中国建设银行中国建设银行中国建设银行中中国建设银行中国建设银行中国建设银行中国建设银行中中国建设银行中国建设银行中国建设银行");
+		jar_fpqz_kj.setBZ("中国建设银行中国建设银行中国建设银行中国建设银行中国建设银行中国建设银行中国建设银行中国建设银行中中国建设银行中国建设银行中国建设银行中国建设银行中中国建设银行中国建设银行中国建设银行");
 		jar_fpqz_kj.setKPRQ(new Date());
 		jar_fpqz_kj.setKPR("苏宁易购");
-		jar_fpqz_kj.setSKR("");
-		jar_fpqz_kj.setFHR("");
+		jar_fpqz_kj.setSKR("管理员");
+		jar_fpqz_kj.setFHR("管理员");
 		jar_fpqz_kj.setXSF_YHZH("中国建设银行 111133141115211322");
 		jar_fpqz_kj.setXSF_DZDH("南京市");
 		jar_fpqz_kj.setXSF_MC("苏宁易购电子商务有限公司");
 		jar_fpqz_kj.setXSF_NSRSBH("91110112575938948G");
-		jar_fpqz_kj
-				.setFP_MW("279+9>*6+57</5571196<02*0555+++13*+521/787<714+*153/1*9*+04378/->74+13//92/0-2<3-<155/85+13*+521/787<774*531");
+		
+		jar_fpqz_kj.setFP_MW("279+9>*6+57</5571196<02*0555+++13*+521/787<714+*153/1*9*+04378/->74+13//92/0-2<3-<155/85+13*+521/787<774*531");
 		jar_fpqz_kj.setJYM("56944149623511400854");
 		jar_fpqz_kj.setEWM("");
-		jar_fpqz_kj.setFP_DM("032101500111");
+		jar_fpqz_kj.setFP_DM("011001600111");
 		jar_fpqz_kj.setFP_HM("11735396");
 		jar_fpqz_kj.setJQBH("161565171869");
 		jar_fpqz_kj.setBMB_BBH("1");
 		jar_fpqz_kj.setQD_BZ("0");
 		jar_fpqz_kj.setQDXMMC("详见货物清单");
 		jar_fpqz_kj.setQZID("4169455300015209000000030000c927");
-		jar_fpqz_kj.setMBDM("0000");
+		//模板
+		jar_fpqz_kj.setMBDM("9990");
+//		jar_fpqz_kj.setMBDM("0000");
 		jar_fpqz_kj.setIAC("");
 		jar_fpqz_kj.setSJLY("09");
 		jar_fpqz_kj.setDKBZ("0");
 		jar_fpqz_kj.setSGBZ("");
 		jar_fpqz_kj.setYFP_DM("");
 		jar_fpqz_kj.setYFP_HM("");
+		
 		JAR_FPQZ_KJMX jar_fpqz_kjmx = new JAR_FPQZ_KJMX();
 		jar_fpqz_kjmx.setXMMC("【苏宁易购超市】仲景原味香菇酱210G 调味品 调料 下饭菜");
 		jar_fpqz_kjmx.setDW("");
@@ -365,6 +369,7 @@ public class PDFProducer {
 		jar_fpqz_kjmx.setLSLBS("");
 		jar_fpqz_kjmx.setZZSTSGL("");
 		jar_fpqz_kjmx.setKCE("");
+		
 		JAR_FPQZ_KJMX jar_fpqz_kjmx2 = new JAR_FPQZ_KJMX();
 		jar_fpqz_kjmx2.setXMMC("【苏宁易购超市】仲景原味香菇酱210G 调味品 调料 下饭菜");
 		jar_fpqz_kjmx2.setDW("");
@@ -381,6 +386,7 @@ public class PDFProducer {
 		jar_fpqz_kjmx2.setLSLBS("");
 		jar_fpqz_kjmx2.setZZSTSGL("");
 		jar_fpqz_kjmx2.setKCE("");
+		
 		JAR_FPQZ_KJMX jar_fpqz_kjmx3 = new JAR_FPQZ_KJMX();
 		jar_fpqz_kjmx3.setXMMC("配送费");
 		jar_fpqz_kjmx3.setDW("");
@@ -397,6 +403,7 @@ public class PDFProducer {
 		jar_fpqz_kjmx3.setLSLBS("");
 		jar_fpqz_kjmx3.setZZSTSGL("");
 		jar_fpqz_kjmx3.setKCE("");
+		
 		JAR_FPQZ_KJMX jar_fpqz_kjmx4 = new JAR_FPQZ_KJMX();
 		jar_fpqz_kjmx4.setXMMC("配送费");
 		jar_fpqz_kjmx4.setDW("");
@@ -413,9 +420,9 @@ public class PDFProducer {
 		jar_fpqz_kjmx4.setLSLBS("");
 		jar_fpqz_kjmx4.setZZSTSGL("");
 		jar_fpqz_kjmx4.setKCE("");
-		JAR_FPQZ_KJMX[] list = new JAR_FPQZ_KJMX[1];
+		JAR_FPQZ_KJMX[] list = new JAR_FPQZ_KJMX[4];
 
-		for (int i = 0; i < 1; i++) {
+		for (int i = 0; i < 4; i++) {
 			list[i] = jar_fpqz_kjmx;
 		}
 		jar_fpqz_kj.setJAR_FPQZ_KJMXS(list);
@@ -425,7 +432,8 @@ public class PDFProducer {
 		} else {
 			Map map = pdfProduce(jar_fpqz_kj);
 			if (1000 == ((Integer) map.get("code")).intValue()) {
-				FileOutputStream file = new FileOutputStream(new File("F:\\test.pdf"));
+				FileOutputStream file = new FileOutputStream(new File("F:\\8-line-0.pdf"));
+//				FileOutputStream file = new FileOutputStream(new File("F:\\123.pdf"));
 				file.write((byte[]) map.get("pdfFile"));
 				file.flush();
 				file.close();

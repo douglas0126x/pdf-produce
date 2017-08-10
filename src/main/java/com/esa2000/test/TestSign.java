@@ -94,6 +94,8 @@ public class TestSign implements Runnable {
 		①、根据坐标签章：测试成功！  注意：机构印章分类只能为空，否则失败；
 		*/
 		signByPosition(dxhy, resultPath+"signByPosition_"+getFormateNow()+".pdf", orgcpde, sealcpde, 504, 60, 1, TSA_type,"", 0.7f);
+	    //TODO  HOW to use the method?
+//		doUpdateSealImgdemo(orgcpde, sealcpde, sealcpde, new File("D:\\work\\eclipse_workspace\\eclipse2_workspace\\pdf-produce\\tmp\\dxhy\\dxhy.pdf"));
 		/*
 		②、根据关键字签章:测试失败-返回状态码：7
 		*/
@@ -127,6 +129,20 @@ public class TestSign implements Runnable {
 			boolean flag, float opacity) {
 		String code = NXServerSignShellUtils.pdfSgin(suroce_Path, temp_path,username, pwd, Keyword, leftOffset, flag, opacity);
 		System.out.println("根据关键字签章返回代码==========" + code);
+	}
+	
+	
+	/**
+	 * 修改签章图片
+	 * @param sbh 印章标识符
+	 * @param pwd 印章授权码
+	 * @param sealType 印章类型编码
+	 * @param file 印模图片文件
+	 * @return
+	 */
+	public static void doUpdateSealImgdemo(String sbh, String pwd, String sealType, File file) {
+		String code = NXServerSignShellUtils.doUpdateSealImg(sbh, pwd, sealType, file);//更新印模接口
+		System.out.println("调用接口修改印章图片返回代码==========" + code);
 	}
 
 	/**

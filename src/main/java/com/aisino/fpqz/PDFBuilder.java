@@ -37,8 +37,7 @@ public class PDFBuilder {
 
 	public static void afterPropertiesSet() throws CustomException {
 		try {
-			fontSimsun = BaseFont.createFont(InvoiceGenUtil.simsun,
-					InvoiceGenUtil.encode, false);
+			fontSimsun = BaseFont.createFont(InvoiceGenUtil.simsun,	InvoiceGenUtil.encode, false);
 			fontCour = BaseFont.createFont("Courier", "", false);
 			fontCourNew = BaseFont.createFont(InvoiceGenUtil.courierNew, "",
 					false);
@@ -66,8 +65,9 @@ public class PDFBuilder {
 		try {
 			if ((null == kj.getMB_A5()) || (kj.getMB_A5().length == 0))
 				reader = new PdfReader(new StringBuilder().append(InvoiceGenUtil.MB_A5_URL)
-						.append(Strings.isNullOrEmpty(kj.getMBDM()) ? "0000"
-								: kj.getMBDM()).append(".pdf").toString());
+						
+						.append(Strings.isNullOrEmpty(kj.getMBDM()) ? "0000" : kj.getMBDM()).append(".pdf").toString());	
+			
 			else {
 				reader = new PdfReader(kj.getMB_A5());
 			}
